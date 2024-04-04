@@ -35,26 +35,27 @@ function result() {
     let newStory = storyText;
 
     //gets random value from array
-    const xitem = randomValueFromArray(xInsert);
+    const xItem = randomValueFromArray(xInsert);
     const yItem = randomValueFromArray(yInsert);
     const zItem = randomValueFromArray(zInsert);
 
     //inserts value into story text
-    newStory = newStory.replaceAll(':insertx:',xItem);
-    newStory = newStory.replaceAll(':inserty:',yItem);
-    newStory = newStory.replaceAll(':insertz:',zItem);
+    newStory = newStory.replaceAll(':insertx:', xItem);
+    newStory = newStory.replaceAll(':inserty:', yItem);
+    newStory = newStory.replaceAll(':insertz:', zItem);
 
     if (customName.value !== '') {
         const name = customName.value;
-
+        newStory = newStory.replaceAll('Bob', name);
     }
 
     if (document.getElementById("uk").checked) {
         const weight = Math.round(300);
         const temperature = Math.round(94);
-
+        newStory = newStory.replaceAll('94 fahrenheit', temperature);
+        newStory = newStory.replaceAll('300 pounds', weight);
     }
 
-    story.textContent = ;
+    story.textContent = newStory;
     story.style.visibility = 'visible';
 }
