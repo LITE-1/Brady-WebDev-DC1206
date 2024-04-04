@@ -1,5 +1,9 @@
-1. COMPLETE VARIABLE AND FUNCTION DEFINITIONS
+// Brady Cousins
+// 2024-04-04
+// 1206-1
+// Part 1 Assignment 4
 
+//Define variables
 const customName = document.getElementById('customname');
 const randomize = document.querySelector('.randomize');
 const story = document.querySelector('.story');
