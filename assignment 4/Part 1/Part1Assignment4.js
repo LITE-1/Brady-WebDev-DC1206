@@ -25,13 +25,24 @@ const yInsert = ['the soup kitchen',
 
 const zInsert = ['spontaneously combusted',
     'melted into a puddle on the sidewalk',
-    'turned into a slug and crawled away']
+    'turned into a slug and crawled away'];
 
-3. EVENT LISTENER AND PARTIAL FUNCTION DEFINITION
 
 randomize.addEventListener('click', result);
 
+
 function result() {
+    let newStory = storyText;
+
+    //gets random value from array
+    const xitem = randomValueFromArray(xInsert);
+    const yItem = randomValueFromArray(yInsert);
+    const zItem = randomValueFromArray(zInsert);
+
+    //inserts value into story text
+    newStory = newStory.replaceAll(':insertx:',xItem);
+    newStory = newStory.replaceAll(':inserty:',yItem);
+    newStory = newStory.replaceAll(':insertz:',zItem);
 
     if (customName.value !== '') {
         const name = customName.value;
