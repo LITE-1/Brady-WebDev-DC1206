@@ -66,7 +66,7 @@ collisionDetection() {
         const distance = Math.sqrt(dx * dx + dy * dy);
   
         if (distance < this.size + ball.size) {
-          ball.color = this.color = randomRGB();
+          ball.color = this.color = randomColour();
         }
       }
     }
@@ -90,11 +90,11 @@ collisionDetection() {
     const ball = new Ball(
       // ball position always drawn at least one ball width
       // away from the edge of the canvas, to avoid drawing errors
-      random(0 + size, width - size),
+      random(0 + sColourize, width - size),
       random(0 + size, height - size),
       random(-7, 7),
       random(-7, 7),
-      randomRGB(),
+      random(),
       size,
     );
   
