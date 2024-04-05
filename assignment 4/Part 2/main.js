@@ -1,3 +1,9 @@
+//brady cousins
+//1206-01
+//assignment 4 part 2
+//2024-04-04
+
+
 const displayedImage = document.querySelector('.displayed-img');
 const thumbBar = document.querySelector('.thumb-bar');
 
@@ -19,7 +25,7 @@ imageFilesnames.forEach(fileName => {
     const newImage = document.createElement('img');
     newImage.setAttribute('src', `images/${fileName}` );
     newImage.setAttribute('alt', imageAltText[fileName]);
-    
+
     thumbBar.appendChild(newImage);
     
     newImage.addEventListener('click',function(){
@@ -33,5 +39,17 @@ const newImage = document.createElement('img');
 newImage.setAttribute('src', xxx);
 newImage.setAttribute('alt', xxx);
 thumbBar.appendChild(newImage);
+btn.addEventListener('click', function() {
+    const currentClass = btn.getAttribute('class');
 
 /* Wiring up the Darken/Lighten button */
+    if (currentClass === 'dark') {
+        btn.setAttribute('class', 'light');
+        btn.textContent = 'Lighten';
+        overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+    } else {
+        btn.setAttribute('class', 'dark');
+        btn.textContent = 'Darken';
+        overlay.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+    }
+});
