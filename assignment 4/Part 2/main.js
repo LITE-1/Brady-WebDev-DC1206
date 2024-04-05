@@ -35,14 +35,9 @@ imageFilesnames.forEach(fileName => {
 });
 
 
-const newImage = document.createElement('img');
-newImage.setAttribute('src', xxx);
-newImage.setAttribute('alt', xxx);
-thumbBar.appendChild(newImage);
 btn.addEventListener('click', function() {
     const currentClass = btn.getAttribute('class');
 
-/* Wiring up the Darken/Lighten button */
     if (currentClass === 'dark') {
         btn.setAttribute('class', 'light');
         btn.textContent = 'Lighten';
